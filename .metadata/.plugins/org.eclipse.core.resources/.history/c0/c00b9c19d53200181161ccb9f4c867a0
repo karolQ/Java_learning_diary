@@ -1,0 +1,11 @@
+package Adapter;
+
+public class UserDaoDemo {
+
+	public static void main(String[] args) {
+		// need an implementation before using interface class UserDao
+		UserDaoImpl ud = new UserDaoImpl();
+		ud.add();
+	}
+
+}
