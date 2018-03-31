@@ -6,13 +6,12 @@ import java.awt.Label;
 import java.awt.TextField;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class FrameTextINT {
 	public static void main(String[] args) {
-		Frame frame = new Frame();
+		Frame frame = new Frame("");
 		frame.setBounds(400, 200, 400, 300);
 		frame.setLayout(new FlowLayout());
 		
@@ -29,7 +28,9 @@ public class FrameTextINT {
 			@Override
 			public void keyPressed(KeyEvent e) {
 				char ch = e.getKeyChar();
-				if(!(ch >= '0' && ch <= '9')){
+				if(!(Character.isDigit(ch))
+						|| (ch == KeyEvent.VK_BACK_SPACE)
+						|| (ch == KeyEvent.VK_DELETE)){
 					e.consume();
 				}
 			}

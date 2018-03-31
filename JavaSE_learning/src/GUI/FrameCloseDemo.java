@@ -3,7 +3,6 @@ package GUI;
 import java.awt.Frame;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 
 public class FrameCloseDemo {
 	public static void main(String[] arg){
